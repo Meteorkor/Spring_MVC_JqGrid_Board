@@ -29,6 +29,16 @@
 <body>
 
 <script >
+
+var kkk = function(){
+	//alert("test");
+	//$('#grid').trigger('reloadGrid');
+	$('#grid').setGridParam({ page: 1, datatype: "json" }).trigger('reloadGrid');
+}
+ 
+</script >
+
+<script >
     $(document).ready(function() {
     	
     	var lastsel2;
@@ -69,6 +79,8 @@
 							function(data){
 						//alert(eval(data));
 						//alert( $.type(data) );
+						
+						/* 
 						var obj = data;
 						var data = '';
 						for(var attr in obj){
@@ -80,9 +92,10 @@
 							
 							//alert(data);
 						}
-						
-						
-					}
+						 */
+						//kkk();
+								$('#grid').setGridParam({ page: 1, datatype: "json" }).trigger('reloadGrid');
+					}//function end
 					,"pu",{
 						"id" : lastsel2
 					}
